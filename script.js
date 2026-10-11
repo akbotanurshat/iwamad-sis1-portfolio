@@ -4,7 +4,6 @@
 const html = document.documentElement;
 const themeToggle = document.getElementById('theme-toggle');
 
-// Сақталған тақырыпты жүктеу (localStorage)
 const savedTheme = localStorage.getItem('theme') || 'light';
 html.dataset.theme = savedTheme;
 updateToggleIcon(savedTheme);
@@ -20,12 +19,12 @@ function updateToggleIcon(theme) {
   themeToggle.textContent = theme === 'dark' ? '☀️' : '🌙';
   themeToggle.setAttribute(
     'aria-label',
-    theme === 'dark' ? 'Жарық тақырыпқа ауысу' : 'Қараңғы тақырыпқа ауысу'
+    theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'
   );
 }
 
 /* =====================================================
-   2. MOBILE NAV TOGGLE (бургер-мәзір)
+   2. MOBILE NAV TOGGLE
    ===================================================== */
 const navToggle = document.getElementById('nav-toggle');
 const primaryNav = document.getElementById('primary-nav');
@@ -36,7 +35,6 @@ navToggle.addEventListener('click', () => {
   navToggle.textContent = isOpen ? '✕' : '☰';
 });
 
-// Сілтеме басқанда мәзірді жабу (мобильде)
 primaryNav.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', () => {
     primaryNav.classList.remove('open');
@@ -52,9 +50,8 @@ const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
 
 form.addEventListener('submit', (event) => {
-  event.preventDefault(); // беттің қайта жүктелуін болдырмау
+  event.preventDefault();
 
-  // Алдыңғы хабарламаны тазалау
   status.textContent = '';
   status.className = 'form-status';
 
@@ -62,33 +59,33 @@ form.addEventListener('submit', (event) => {
   const email = form.email.value.trim();
   const message = form.message.value.trim();
 
-  // --- 1) Бос өрістерді тексеру ---
+  // --- 1) Empty required fields ---
   if (!name) {
-    showError('Атыңызды енгізіңіз — бос өріс.');
+    showError('Please enter your name — this field is required.');
     form.name.focus();
     return;
   }
   if (!email) {
-    showError('Email енгізіңіз — бос өріс.');
+    showError('Please enter your email — this field is required.');
     form.email.focus();
     return;
   }
   if (!message) {
-    showError('Хабарлама жазыңыз — бос өріс.');
+    showError('Please enter a message — this field is required.');
     form.message.focus();
     return;
   }
 
-  // --- 2) Email форматын тексеру ---
+  // --- 2) Email format ---
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    showError('Email форматы дұрыс емес (мысалы: abc@mail.com).');
+    showError('Invalid email format (example: abc@mail.com).');
     form.email.focus();
     return;
   }
 
-  // --- 3) Сәтті жағдай ---
-  status.textContent = 'Рахмет! Хабарламаңыз сәтті қабылданды. ✅';
+  // --- 3) Success ---
+  status.textContent = 'Thank you! Your message was sent successfully. ✅';
   status.classList.add('success');
   form.reset();
 });
