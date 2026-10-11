@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="kk" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ақбота Нұршат — frontend әзірлеушінің жеке портфолиосы" />
+  <title>Ақбота Нұршат — Портфолио</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Ақбота Нұршат</a>
+
+      <button
+        id="nav-toggle"
+        class="nav-toggle"
+        aria-label="Мәзірді ашу"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        ☰
+      </button>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Негізгі навигация">
+        <ul>
+          <li><a href="#about">Мен туралы</a></li>
+          <li><a href="#projects">Жобалар</a></li>
+          <li><a href="#contact">Байланыс</a></li>
+        </ul>
+      </nav>
+
+      <button
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-label="Тақырыпты ауыстыру"
+      >
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section id="about" class="section">
+      <div class="container">
+        <h1>Сәлем, мен — <span class="accent">Ақбота Нұршат</span></h1>
+        <p class="lead">
+          Frontend әзірлеушімін. HTML, CSS және JavaScript арқылы
+          ыңғайлы, жылдам және қолжетімді веб-беттер жасаймын.
+        </p>
+        <p>
+          Қазір IWAMAD курсында оқып жатырмын. Курс барысында семантикалық
+          HTML, responsive дизайн, CSS variables және DOM-мен жұмыс істеуді
+          меңгердім. Бос уақытымда жаңа технологияларды үйренемін және
+          кішкентай жобалар жасаймын.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2>Жобаларым</h2>
+        <p class="section-sub">Курс барысында жасаған жұмыстарым</p>
+
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Week 2 — Калькулятор</h3>
+            <p>
+              Қарапайым калькулятор, vanilla JavaScript-пен жасалған.
+              Қосу, алу, көбейту және бөлу амалдарын орындайды.
+            </p>
+            <a href="https://github.com/akbotanurshat/iwamad-practice" target="_blank" rel="noopener">
+              Кодты көру →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <h3>Week 3 — Todo List</h3>
+            <p>
+              Тапсырмаларды қосу, өшіру және орындалды деп белгілеу
+              мүмкіндігі бар қосымша. Деректер localStorage-та сақталады.
+            </p>
+            <a href="https://github.com/akbotanurshat/iwamad-practice" target="_blank" rel="noopener">
+              Кодты көру →
+            </a>
+          </article>
+
+          <article class="project-card">
+            <h3>Week 4 — Responsive Landing</h3>
+            <p>
+              Мобильді және десктоп нұсқалары бар бір беттік лендинг.
+              CSS Grid, flexbox және media queries қолданылған.
+            </p>
+            <a href="https://github.com/akbotanurshat/iwamad-practice" target="_blank" rel="noopener">
+              Кодты көру →
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Байланыс</h2>
+        <p class="section-sub">Хабарлама қалдырыңыз — жауап беремін</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Атыңыз</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Хабарлама</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-primary">Жіберу</button>
+
+          <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2025 Ақбота Нұршат. Барлық құқықтар қорғалған.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
