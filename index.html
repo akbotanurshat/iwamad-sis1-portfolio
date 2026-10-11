@@ -1,39 +1,39 @@
 <!DOCTYPE html>
-<html lang="kk" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ақбота Нұршат — frontend әзірлеушінің жеке портфолиосы" />
-  <title>Ақбота Нұршат — Портфолио</title>
+  <meta name="description" content="Akbota Nurshat — frontend developer portfolio" />
+  <title>Akbota Nurshat — Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#top" class="logo">Ақбота Нұршат</a>
+      <a href="#top" class="logo">Akbota Nurshat</a>
 
       <button
         id="nav-toggle"
         class="nav-toggle"
-        aria-label="Мәзірді ашу"
+        aria-label="Open menu"
         aria-expanded="false"
         aria-controls="primary-nav"
       >
         ☰
       </button>
 
-      <nav id="primary-nav" class="primary-nav" aria-label="Негізгі навигация">
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
         <ul>
-          <li><a href="#about">Мен туралы</a></li>
-          <li><a href="#projects">Жобалар</a></li>
-          <li><a href="#contact">Байланыс</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
       <button
         id="theme-toggle"
         class="theme-toggle"
-        aria-label="Тақырыпты ауыстыру"
+        aria-label="Toggle theme"
       >
         🌙
       </button>
@@ -43,56 +43,56 @@
   <main id="top">
     <section id="about" class="section">
       <div class="container">
-        <h1>Сәлем, мен — <span class="accent">Ақбота Нұршат</span></h1>
+        <h1>Hi, I'm <span class="accent">Akbota Nurshat</span></h1>
         <p class="lead">
-          Frontend әзірлеушімін. HTML, CSS және JavaScript арқылы
-          ыңғайлы, жылдам және қолжетімді веб-беттер жасаймын.
+          I'm a frontend developer. I build fast, accessible, and user-friendly
+          web pages using HTML, CSS, and JavaScript.
         </p>
         <p>
-          Қазір IWAMAD курсында оқып жатырмын. Курс барысында семантикалық
-          HTML, responsive дизайн, CSS variables және DOM-мен жұмыс істеуді
-          меңгердім. Бос уақытымда жаңа технологияларды үйренемін және
-          кішкентай жобалар жасаймын.
+          I'm currently studying at the IWAMAD course. During the course, I have
+          learned semantic HTML, responsive design, CSS variables, and working
+          with the DOM. In my free time, I explore new technologies and build
+          small projects.
         </p>
       </div>
     </section>
 
     <section id="projects" class="section section-alt">
       <div class="container">
-        <h2>Жобаларым</h2>
-        <p class="section-sub">Курс барысында жасаған жұмыстарым</p>
+        <h2>My Projects</h2>
+        <p class="section-sub">Work I have built during the course</p>
 
         <div class="projects-grid">
           <article class="project-card">
-            <h3>Week 2 — Калькулятор</h3>
+            <h3>Week 2 — Calculator</h3>
             <p>
-              Қарапайым калькулятор, vanilla JavaScript-пен жасалған.
-              Қосу, алу, көбейту және бөлу амалдарын орындайды.
+              A simple calculator built with vanilla JavaScript. It supports
+              addition, subtraction, multiplication, and division.
             </p>
             <a href="https://github.com/akbotanurshat/iwamad-practice" target="_blank" rel="noopener">
-              Кодты көру →
+              View code →
             </a>
           </article>
 
           <article class="project-card">
             <h3>Week 3 — Todo List</h3>
             <p>
-              Тапсырмаларды қосу, өшіру және орындалды деп белгілеу
-              мүмкіндігі бар қосымша. Деректер localStorage-та сақталады.
+              An app for adding, removing, and marking tasks as completed.
+              Data is saved in localStorage.
             </p>
             <a href="https://github.com/akbotanurshat/iwamad-practice" target="_blank" rel="noopener">
-              Кодты көру →
+              View code →
             </a>
           </article>
 
           <article class="project-card">
             <h3>Week 4 — Responsive Landing</h3>
             <p>
-              Мобильді және десктоп нұсқалары бар бір беттік лендинг.
-              CSS Grid, flexbox және media queries қолданылған.
+              A single-page landing with mobile and desktop layouts.
+              Built with CSS Grid, flexbox, and media queries.
             </p>
             <a href="https://github.com/akbotanurshat/iwamad-practice" target="_blank" rel="noopener">
-              Кодты көру →
+              View code →
             </a>
           </article>
         </div>
@@ -101,12 +101,12 @@
 
     <section id="contact" class="section">
       <div class="container">
-        <h2>Байланыс</h2>
-        <p class="section-sub">Хабарлама қалдырыңыз — жауап беремін</p>
+        <h2>Contact</h2>
+        <p class="section-sub">Leave a message — I will get back to you</p>
 
         <form id="contact-form" class="contact-form" novalidate>
           <div class="form-field">
-            <label for="name">Атыңыз</label>
+            <label for="name">Your Name</label>
             <input type="text" id="name" name="name" required />
           </div>
 
@@ -116,11 +116,11 @@
           </div>
 
           <div class="form-field">
-            <label for="message">Хабарлама</label>
+            <label for="message">Message</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
 
-          <button type="submit" class="btn-primary">Жіберу</button>
+          <button type="submit" class="btn-primary">Send</button>
 
           <p id="form-status" class="form-status" role="alert" aria-live="polite"></p>
         </form>
@@ -130,7 +130,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© 2025 Ақбота Нұршат. Барлық құқықтар қорғалған.</p>
+      <p>© 2025 Akbota Nurshat. All rights reserved.</p>
     </div>
   </footer>
 
